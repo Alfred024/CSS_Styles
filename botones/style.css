@@ -1,4 +1,9 @@
 /*Estilos generales*/
+body{
+    background-color: #F7DBD7;
+    height: 100vh;
+    margin-bottom: 100px;
+}
 div{
     display: flex;
     flex-direction: column;
@@ -86,10 +91,10 @@ div{
 
 /*Botón Doble no es ese */
 .double{
-    background-color: white;
+    background-color: unset;
     color: black;
     border-radius: 0px;
-    border: solid black 2px;
+    border: solid black 1px;
     position: relative;
 }
 .double::before, .double::after{
@@ -114,3 +119,71 @@ div{
     transform: translate(5px, 5px);
     z-index: 1;
 }
+
+/*Botón con Agua*/
+.agua{
+    background-color: unset;
+    color: rgb(30, 5, 101);
+    font-weight: 700;
+    border-radius: 10px 0px;
+    border: solid rgb(30, 5, 101) 1px;
+    position: relative;
+    overflow: hidden;
+}
+.agua::before, .agua::after{
+    content: "";
+    position: absolute;
+    border-radius: 0px 20px;
+    background-color: lightblue;
+    width: 100%;
+    height: 0%;
+    left: -40%;
+    bottom: 0;
+    z-index: -1;
+    transition: 1.3s;
+}
+.agua:hover::before{
+    width: 220%;
+    height: 180%;
+    left: -10%;
+}
+
+
+/*Botón con ícono*/
+.iconBtn {
+	display: flex;
+	height: 50px;
+	padding: 0;
+	background: #009578;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	overflow: hidden;
+	font-family: "Quicksand", sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.iconBtn:hover {
+	background: #008168;
+}
+
+.iconBtn:active {
+	background: #006e58;
+}
+
+.button__text,
+.button__icon {
+	display: inline-flex;
+	align-items: center;
+	padding: 0 24px;
+	color: #fff;
+	height: 100%;
+}
+
+.button__icon {
+	font-size: 1.5em;
+	background: rgba(0, 0, 0, 0.08);
+}
+

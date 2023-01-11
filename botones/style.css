@@ -1,0 +1,115 @@
+div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    place-items: center;
+}
+.btn{
+    /* padding: 10px 15px; */
+    width: 120px;
+    height: 50px;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    justify-content: center;
+    color: white;
+    letter-spacing: 3px;
+}
+
+/* Botón gradiante */
+.gradient{
+    background-image: linear-gradient(to right, rgb(192, 58, 58), rgb(67, 67, 179) 55%);
+    background-size: 200%;
+}
+.gradient:hover{
+    transition: 0.5s ease-out;
+    background-position: center;
+}
+.container{
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+/*Botón no c*/
+.normal{
+    position: relative;
+    background-color: black;
+    transition: 0.5s;
+}
+.normal:hover{
+    /* El primer parametro es el eje de las x */
+    transform: translate(10px, -1px);
+}
+.normal::before, .normal::after{
+    content: "";
+    position: absolute;
+    background: black;
+    opacity: 0.3;
+    width: 90%;
+    height: 100%;
+    border-radius: inherit; 
+    z-index: -1;
+}
+.normal:hover::before{
+    transition: 0.5s;
+    display: block;
+    transform: translate(-9px, 6px);
+}
+.normal:hover::after{
+    transition: 0.5s;
+    display: block;
+    transform: translate(-16px, 11px);
+}
+
+/*Botón Neón*/
+
+/* box shadow: (horizontal offset) (vertical offset) (blur) (colour)*/
+.neon{
+    background-color: #07a762;
+    border: solid #07a762;
+    transition: 0.5s;
+}
+.neon:hover{
+    color: 842559;
+    background-color: #08d77d;
+    box-shadow: 0 0 10px #08d77d, 0 0 30px #08d77d, 0 0 70px #08d77d;
+}
+
+/*Botón Doble no es ese */
+.double{
+    background-color: white;
+    color: black;
+    border-radius: 0px;
+    border: solid black 2px;
+    position: relative;
+}
+.double::before, .double::after{
+    content: "";
+    position: absolute;
+    border: solid black 1px;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.6s;
+}
+.double:hover{
+    border: none;
+}
+.double:hover:before{
+    transform: translate(-5px, -5px);
+    z-index: 1;
+}
+.double:hover:after{
+    transform: translate(5px, 5px);
+    z-index: 1;
+}

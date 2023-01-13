@@ -1,0 +1,45 @@
+/* General styles */
+body{
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+/* Product selling card */
+.shopCard{
+    font-family: 'Mukta', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 500px;
+    height: fit-content;
+    background-color: rgba(244, 243, 243, 0.897);
+    border-radius: 15px;
+    overflow: hidden;
+}
+.shopCard img{
+    width: 100%;
+    height: 100%;
+}
+.shopCard .infoContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 20px;
+}
+.shopCard p{
+    font-size: 12px;
+}
+.shopCard button{
+    color: white;
+    background-color: rgb(227, 156, 156);
+    border: none;
+    padding: 10px 0px;
+    border-radius: 10px;
+}
+.shopCard .price{
+    font-weight: 900;
+    font-size: 20px;
+    color: rgb(249, 114, 137);
+}
+
+/* Presentation card */

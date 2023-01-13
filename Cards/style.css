@@ -4,6 +4,9 @@ body{
     flex-direction: column;
     place-items: center;
 }
+article{
+    margin-bottom: 30px;
+}
 
 /* Product selling card */
 .shopCard{
@@ -43,3 +46,37 @@ body{
 }
 
 /* Presentation card */
+
+.userCard{
+    border-radius: 10px;
+    width: 300px;
+    height: 340px;
+    background-image: linear-gradient(to right, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+}
+.userPhoto{
+    background-image: url(./imgs/icon-profile.jpg);
+    background-size: contain;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    background-color: white;
+    border-radius: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    margin-top: 55px;
+}
+.stats{
+    color: white;
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-evenly;
+    background-color: black;
+    
+    bottom: 0px;
+    justify-self: end;
+}
